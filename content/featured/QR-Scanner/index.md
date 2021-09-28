@@ -7,8 +7,8 @@ cta: '#'
 tech:
   - ReactNative
   - Express
-  - 
-  - 
+  -
+  -
 ---
 
 Uploading....
