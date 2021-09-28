@@ -1,6 +1,6 @@
 ---
 date: '2'
-title: 'Spotify Profile'
+title: 'Remote Quiz App'
 cover: './remotequiz.png'
 github: 'https://github.com/rafiquecudjoe/remote-quiz-app'
 external: '#'
