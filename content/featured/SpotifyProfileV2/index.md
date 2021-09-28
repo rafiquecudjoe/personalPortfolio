@@ -1,6 +1,6 @@
 ---
 date: '3'
-# title: 'QR-Code Scanner'
+title: 'QR-Code Scanner'
 cover: '#'
 external: '#'
 cta: '#'
