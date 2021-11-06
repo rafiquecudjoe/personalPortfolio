@@ -126,7 +126,7 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
-  const skills = ['JavaScript (ES6+)', 'React', 'React Native', 'Node.js', 'WordPress','MongoDb'];
+  const skills = ['JavaScript (ES6+)', 'React', 'React Native', 'Node.js', 'WordPress', 'MongoDb'];
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
@@ -143,9 +143,9 @@ const About = () => {
 
             <p>
               Fast-forward to today, and I’ve had the privilege of working at{' '}
-              <a href="https://pilgrimconsulting.group/">a custom software development agency</a>. My
-              main focus these days is building accessible, inclusive products and digital
-              experiences.
+              <a href="https://pilgrimconsulting.group/">a custom software development agency</a>{' '}
+              and <a href="https://ejara.io/">a fintech company</a> . My main focus these days is
+              building accessible, inclusive products and digital experiences.
             </p>
             <p>Here are a few technologies I’ve been working with recently:</p>
           </div>
