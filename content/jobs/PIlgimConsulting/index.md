@@ -3,7 +3,7 @@ date: '2021-08-01'
 title: 'Software Developer'
 company: 'Pilgrim Consult.'
 location: 'Tennase, Unintes States'
-range: 'August 2021 - Present'
+range: 'August 2021 - November 2021'
 url: 'https://pilgrimconsulting.group/'
 ---
 
