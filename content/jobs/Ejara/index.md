@@ -4,7 +4,7 @@ title: 'Software Engineer'
 company: 'Ejara'
 location: 'Doula, Cameroon'
 range: 'November 2021 - Present'
-url: 'https://pilgrimconsulting.group/'
+url: 'https://Ejara.io/'
 ---
 
 - Building a RESTful API with Node.js using NestJS.
