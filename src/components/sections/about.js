@@ -128,6 +128,7 @@ const About = () => {
 
   const skills = [
     'JavaScript (ES6+)',
+    'Typescript',
     'React',
     'React Native',
     'Node.js',
@@ -136,6 +137,9 @@ const About = () => {
     'MySQL',
     'NestJS',
     'Prisma DB ORM',
+    'GraphQL',
+    'GraphCMS',
+    'NestJS',
   ];
 
   return (
