@@ -7,4 +7,4 @@ range: 'November 2021 - Present'
 url: 'https://Ejara.io/'
 ---
 
-- Building a RESTful API with Node.js using NestJS.
+- Build RESTful API's with Node.js using NestJS and Typescript.
