@@ -1,14 +1,15 @@
 ---
 date: '3'
 title: 'Flight Booking API'
-cover: '#'
-external: '#'
+cover: './flights.png'
+github: 'https://github.com/rafiquecudjoe/flight-prices-api'
 cta: '#'
 tech:
   - Nodejs
   - NestJS
   - Typescript
   - MySQL
+  - Prisma
 ---
 
-Uploading....
+An API for comparing fligh prices and booking Tickets
