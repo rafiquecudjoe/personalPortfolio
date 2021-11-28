@@ -1,5 +1,5 @@
 ---
-date: '2'
+date: '3'
 title: 'Remote Quiz App'
 cover: './remotequiz.png'
 github: 'https://github.com/rafiquecudjoe/remote-quiz-app'
