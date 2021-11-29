@@ -139,7 +139,7 @@ const About = () => {
     'Prisma DB ORM',
     'GraphQL',
     'GraphCMS',
-    'NestJS',
+    'NextJS',
   ];
 
   return (

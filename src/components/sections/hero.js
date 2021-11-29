@@ -65,13 +65,13 @@ const Hero = () => {
     <>
       <p>
         I’m a software developer specializing in building (and occasionally designing) exceptional
-        digital experiences.My main areas of experience are Web development and Back-End (Server-side)
-        technology. At the moment am interested in improving my technical skills and expanding my
-        knowledge in Technology, Finance and Health.
+        digital experiences. My main areas of experience are Web development and Back-End
+        (Server-side) technology. At the moment am interested in improving my technical skills and
+        expanding my knowledge in Technology, Finance and Health.
       </p>
     </>
   );
- /* const five = (
+  /* const five = (
     <a
       className="email-link"
       href="https://www.newline.co/courses/build-a-spotify-connected-app"
