@@ -12,4 +12,4 @@ tech:
   - Prisma
 ---
 
-An API for comparing fligh prices and booking Tickets
+An API for comparing flight prices and booking Tickets
