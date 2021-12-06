@@ -1,6 +1,6 @@
 ---
-date: '6'
-title: 'Real Estate Web App'
+date: '7'
+title: 'The TECH GUY Blog'
 # cover: '#'
 github: '#'
 external: '#'
