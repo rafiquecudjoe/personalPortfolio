@@ -12,4 +12,4 @@ tech:
   - Prisma
 ---
 
-A Microservice for creating and paying invoices on the bitcoin lighning network.
+A Microservice for creating and paying invoices on the bitcoin lightning network.
