@@ -12,4 +12,4 @@ tech:
   - External API
 ---
 
-coming soon
+Create a currency exchange API to get the latest currency Rates from an External API
