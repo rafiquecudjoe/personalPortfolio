@@ -1,5 +1,5 @@
 ---
-date: '7'
+date: '8'
 title: 'The TECH GUY Blog'
 # cover: '#'
 github: '#'

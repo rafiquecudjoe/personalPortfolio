@@ -1,5 +1,5 @@
 ---
-date: '8'
+date: '7'
 title: 'Currency Exchange Microservice'
 cover: './currency.jpeg'
 github: '#'
