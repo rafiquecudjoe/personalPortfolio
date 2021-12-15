@@ -1,5 +1,5 @@
 ---
-date: '9'
+date: '8'
 title: 'Al-Aleem Search Engine'
 cover: './aleem.png'
 github: 'https://github.com/rafiquecudjoe/Search-engine-React-Tailwind-Google-API'
@@ -10,4 +10,4 @@ tech:
   - RapidAPi
 ---
 
-This is a Google Search Engine clone bui;t with ReactJS, TailwindCSS and Rapid API
+This is a Google Search Engine clone built with ReactJS, TailwindCSS and Rapid API
