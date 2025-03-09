@@ -2,7 +2,7 @@
 date: '5'
 title: 'Website Preview API'
 cover: './response.png'
-github: 'https://github.com/rafiquecudjoe/sitePreview-API'
+github: '#'
 external: '#'
 tech:
   - NestJS
@@ -12,4 +12,4 @@ tech:
   - Typescript
 ---
 
-Website Preview API is a link unfurling API that returns metadata of a website . The endpoint returns a parsed version of the html content of the url parsed and returns it in the form of a JSON Object
+- Website Preview API is a link unfurling API that returns metadata of a website . The endpoint returns a parsed version of the html content of the url parsed and returns it in the form of a JSON Object

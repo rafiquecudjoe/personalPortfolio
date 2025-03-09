@@ -1,8 +1,8 @@
 ---
-date: '6'
-title: 'Invoice Microservive'
+date: '2'
+title: 'Bitcoin Lighting Invoice and Payment Microservive'
 cover: './light.png'
-github: 'https://github.com/rafiquecudjoe/flight-prices-api'
+github: '#'
 cta: '#'
 tech:
   - Nodejs
@@ -12,4 +12,6 @@ tech:
   - Prisma
 ---
 
-A Microservice for creating and paying invoices on the bitcoin lightning network.
+- Built an invoice service on the Bitcoin Lightning Network using TypeScript and NestJS, allowing
+  seamless Bitcoin payments with Satoshis. Integrated a MySQL database to store transaction data
+  securely and optimized for high-speed data retrieval.​
