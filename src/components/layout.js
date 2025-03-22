@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import styled, { ThemeProvider } from 'styled-components';
-import { Head, Loader, Nav, Social, Email, Footer } from '@components';
+import { Head, Loader, Nav, Social, Email } from '@components';
 import { GlobalStyle, theme } from '@styles';
+import Footer from './footer';
 
 // https://medium.com/@chrisfitkin/how-to-smooth-scroll-links-in-gatsby-3dc445299558
 if (typeof window !== 'undefined') {
@@ -17,7 +18,7 @@ const StyledContent = styled.div`
 `;
 
 const Layout = ({ children, location }) => {
-  const isHome = location.pathname === '/';
+  const isHome = location && location.pathname === '/';
   const [isLoading, setIsLoading] = useState(isHome);
 
   // Sets target="_blank" rel="noopener noreferrer" on external links
@@ -38,7 +39,7 @@ const Layout = ({ children, location }) => {
       return;
     }
 
-    if (location.hash) {
+    if (location && location.hash) {
       const id = location.hash.substring(1); // location.hash without the '#'
       setTimeout(() => {
         const el = document.getElementById(id);
@@ -60,7 +61,10 @@ const Layout = ({ children, location }) => {
         <ThemeProvider theme={theme}>
           <GlobalStyle />
 
-          <a className="skip-to-content" href="#content">
+          <a
+            className="skip-to-content"
+            href="#content"
+            onClick={() => document.getElementById('content').focus()}>
             Skip to Content
           </a>
 

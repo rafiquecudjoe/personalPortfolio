@@ -39,6 +39,21 @@ const StyledContactSection = styled.section`
     ${({ theme }) => theme.mixins.bigButton};
     margin-top: 50px;
   }
+
+  .contact-details {
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  .contact-item {
+    margin: 10px 0;
+    color: var(--slate);
+
+    strong {
+      color: var(--lightest-slate);
+      margin-right: 10px;
+    }
+  }
 `;
 
 const Contact = () => {
@@ -55,14 +70,29 @@ const Contact = () => {
 
   return (
     <StyledContactSection id="contact" ref={revealContainer}>
-      <h2 className="numbered-heading overline">What’s Next?</h2>
+      <h2 className="numbered-heading overline">What's Next?</h2>
 
       <h2 className="title">Get In Touch</h2>
 
       <p>
-        I am  currently looking for new opportunities, my inbox is always open.
-        Whether you have a question or just want to say hi, I’ll try my best to get back to you!
+        I am currently looking for new opportunities, my inbox is always open. Whether you have a
+        question or just want to say hi, I'll try my best to get back to you!
       </p>
+
+      <div className="contact-details">
+        <div className="contact-item">
+          <strong>Email:</strong> rafiqueacudjoe@gmail.com
+        </div>
+        <div className="contact-item">
+          <strong>Phone:</strong> +233 5444 13229
+        </div>
+        <div className="contact-item">
+          <strong>Location:</strong> Accra, Ghana
+        </div>
+        <div className="contact-item">
+          <strong>Business Hours:</strong> Monday-Friday, 9AM-5PM GMT
+        </div>
+      </div>
 
       <a className="email-link" href={`mailto:${email}`}>
         Say Hello

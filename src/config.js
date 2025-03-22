@@ -1,5 +1,5 @@
 module.exports = {
-  email: 'rasgalazy5@gmail.com',
+  email: 'rafiqueacudjoe@gmail.com',
 
   socialMedia: [
     {
@@ -36,6 +36,22 @@ module.exports = {
     {
       name: 'Work',
       url: '/#projects',
+    },
+    {
+      name: 'FAQ',
+      url: '/faq',
+    },
+    {
+      name: 'Testimonials',
+      url: '/testimonials',
+    },
+    {
+      name: 'Terms',
+      url: '/terms',
+    },
+    {
+      name: 'Privacy',
+      url: '/privacy',
     },
     {
       name: 'Contact',

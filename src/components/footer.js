@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
+import { Link } from 'gatsby';
 import styled from 'styled-components';
-import { Icon } from '@components/icons';
 import { socialMedia } from '@config';
+import { Icon } from '@components/icons';
 
 const StyledFooter = styled.footer`
   ${({ theme }) => theme.mixins.flexCenter};
@@ -40,77 +40,53 @@ const StyledSocialLinks = styled.div`
   }
 `;
 
+const StyledLegalLinks = styled.div`
+  margin-top: 10px;
+
+  a {
+    padding: 10px;
+    font-family: var(--font-mono);
+    font-size: var(--fz-xxs);
+    color: var(--light-slate);
+
+    &:hover,
+    &:focus {
+      color: var(--green);
+    }
+  }
+`;
+
 const StyledCredit = styled.div`
   color: var(--light-slate);
   font-family: var(--font-mono);
   font-size: var(--fz-xxs);
   line-height: 1;
-
-  a {
-    padding: 10px;
-  }
-
-  .github-stats {
-    margin-top: 10px;
-
-    & > span {
-      display: inline-flex;
-      align-items: center;
-      margin: 0 7px;
-    }
-    svg {
-      display: inline-block;
-      margin-right: 5px;
-      width: 14px;
-      height: 14px;
-    }
-  }
 `;
 
-const Footer = () => {
-  const [githubInfo, setGitHubInfo] = useState({
-    stars: null,
-    forks: null,
-  });
+const Footer = () => (
+  <StyledFooter>
+    <StyledSocialLinks>
+      <ul>
+        {socialMedia &&
+          socialMedia.map(({ name, url }, i) => (
+            <li key={i}>
+              <a href={url} aria-label={name}>
+                <Icon name={name} />
+              </a>
+            </li>
+          ))}
+      </ul>
+    </StyledSocialLinks>
 
-  useEffect(() => {
-    if (process.env.NODE_ENV !== 'production') {
-      return;
-    }
-    fetch('https://api.github.com/repos/bchiang7/v4')
-      .then(response => response.json())
-      .then(json => {
-        const { stargazers_count, forks_count } = json;
-        setGitHubInfo({
-          stars: stargazers_count,
-          forks: forks_count,
-        });
-      })
-      .catch(e => console.error(e));
-  }, []);
+    <StyledLegalLinks>
+      <Link to="/terms">Terms of Service</Link>
+      <Link to="/privacy">Privacy Policy</Link>
+    </StyledLegalLinks>
 
-  return (
-    <StyledFooter>
-      <StyledSocialLinks>
-        <ul>
-          {socialMedia &&
-            socialMedia.map(({ name, url }, i) => (
-              <li key={i}>
-                <a href={url} aria-label={name}>
-                  <Icon name={name} />
-                </a>
-              </li>
-            ))}
-        </ul>
-      </StyledSocialLinks>
-
-     
-    </StyledFooter>
-  );
-};
-
-Footer.propTypes = {
-  githubInfo: PropTypes.object,
-};
+    <StyledCredit tabindex="-1">
+      <div>© {new Date().getFullYear()} Rafique Cudjoe. All Rights Reserved.</div>
+    </StyledCredit>
+  </StyledFooter>
+);
 
 export default Footer;
