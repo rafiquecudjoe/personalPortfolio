@@ -94,9 +94,18 @@ const Contact = () => {
         </div>
       </div>
 
-      <a className="email-link" href={`mailto:${email}`}>
-        Say Hello
-      </a>
+      <div className="cta-buttons">
+        <a className="email-link" href={`mailto:${email}`}>
+          Start a Project
+        </a>
+        <a
+          className="secondary-link"
+          href="/Rafique_Resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer">
+          Download Resume
+        </a>
+      </div>
     </StyledContactSection>
   );
 };
