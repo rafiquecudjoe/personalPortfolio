@@ -60,14 +60,19 @@ const Hero = () => {
 
   const one = <h1>Hi, my name is</h1>;
   const two = <h2 className="big-heading">Rafique Adam Cudjoe.</h2>;
-  const three = <h3 className="big-heading">I build amazing things for the web.</h3>;
+  const three = <h3 className="big-heading">I turn complex problems into elegant solutions.</h3>;
   const four = (
     <>
       <p>
-        I’m a software developer specializing in building (and occasionally designing) exceptional
-        digital experiences. My main areas of experience are Web development and Back-End
-        (Server-side) technology. At the moment am interested in improving my technical skills and
-        expanding my knowledge in Technology, Finance and Health.
+        I'm a fintech-focused software engineer specializing in building scalable, secure financial
+        applications. With expertise in full-stack development and backend architecture, I help
+        fintech companies create robust payment systems, trading platforms, and financial APIs.
+        Currently working at{' '}
+        <a href="https://ejara.com" target="_blank" rel="noreferrer">
+          Ejara
+        </a>
+        , where I build next-generation financial products that serve millions of users across
+        Africa.
       </p>
     </>
   );
