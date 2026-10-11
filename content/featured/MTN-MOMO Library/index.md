@@ -1,5 +1,5 @@
 ---
-date: '6'
+date: '9'
 title: 'MTN-MOMO Library'
 cover: '/images/featured/mtn-momo-library/mtn.jpeg'
 github: '#'

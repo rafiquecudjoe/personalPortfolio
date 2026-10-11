@@ -1,14 +1,14 @@
 ---
 date: '2021-11-01'
-title: 'Software Engineer'
+title: 'Backend Engineer'
 company: 'Ejara'
-location: 'Doula, Cameroon'
-range: 'November 2021 - Present'
+location: 'Douala, Cameroon'
+range: 'November 2021 - November 2025'
 url: 'https://Ejara.io/'
 ---
 
-- Engineered modular, secure code in NestJS and TypeScript, supporting thousands of users for cryptocurrency investment and savings
-- Enhanced API integration by documenting REST endpoints using NestJS Swagger, adhering to OpenAPI 3 standards
-- Increased development efficiency by 50% through writing reusable unit and integration tests with 80%+ code coverage, reducing bugs and ensuring high-quality deployments
-- Improved data accuracy by designing and implementing JSON schema validations in server-side applications
-- Provided prompt solutions and proactive troubleshooting support to swiftly resolve subtle and complex issues as and when needed.
+- Engineered production backend systems in NestJS and TypeScript serving thousands of users investing and saving in cryptocurrency across Africa
+- Architected and maintained 40+ REST endpoints documented to the OpenAPI 3 spec (Swagger), cutting frontend integration time across teams
+- Reached 80%+ unit and integration test coverage with Jest, improving deployment confidence by 50%+ and reducing production bugs
+- Implemented JSON schema validation to catch edge-case input errors before they reached the database
+- Optimized API performance and JWT auth with role-based access control for growing concurrent load, and integrated external payment gateways and financial APIs
