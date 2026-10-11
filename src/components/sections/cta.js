@@ -182,7 +182,7 @@ const CTA = () => {
           <h2 className="cta-title">Ready to Build Something Amazing?</h2>
 
           <p className="cta-description">
-            Let's discuss your project and turn your ideas into powerful, scalable solutions. From
+            Let&apos;s discuss your project and turn your ideas into powerful, scalable solutions. From
             fintech platforms to enterprise applications, I deliver results that drive business
             growth.
           </p>

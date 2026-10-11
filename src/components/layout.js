@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import { useRouter } from 'next/router';
 import styled, { ThemeProvider } from 'styled-components';
 import { Head, Loader, Nav, Social, Email } from '@components';
 import { GlobalStyle, theme } from '@styles';
 import Footer from './footer';
 
-// https://medium.com/@chrisfitkin/how-to-smooth-scroll-links-in-gatsby-3dc445299558
 if (typeof window !== 'undefined') {
   // eslint-disable-next-line global-require
   require('smooth-scroll')('a[href*="#"]');
@@ -17,11 +17,11 @@ const StyledContent = styled.div`
   min-height: 100vh;
 `;
 
-const Layout = ({ children, location }) => {
-  const isHome = location && location.pathname === '/';
+const Layout = ({ children }) => {
+  const router = useRouter();
+  const isHome = router.pathname === '/';
   const [isLoading, setIsLoading] = useState(isHome);
 
-  // Sets target="_blank" rel="noopener noreferrer" on external links
   const handleExternalLinks = () => {
     const allLinks = Array.from(document.querySelectorAll('a'));
     if (allLinks.length > 0) {
@@ -39,10 +39,10 @@ const Layout = ({ children, location }) => {
       return;
     }
 
-    if (location && location.hash) {
-      const id = location.hash.substring(1); // location.hash without the '#'
+    const hash = router.asPath.split('#')[1];
+    if (hash) {
       setTimeout(() => {
-        const el = document.getElementById(id);
+        const el = document.getElementById(hash);
         if (el) {
           el.scrollIntoView();
           el.focus();
@@ -90,7 +90,6 @@ const Layout = ({ children, location }) => {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-  location: PropTypes.object.isRequired,
 };
 
 export default Layout;

@@ -1,7 +1,7 @@
 ---
 date: '3'
 title: 'Currency Exchange Microservice'
-cover: './currency.jpeg'
+cover: '/images/featured/currency-exchange/currency.jpeg'
 github: '#'
 cta: '#'
 tech:

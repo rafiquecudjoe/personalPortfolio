@@ -62,6 +62,31 @@ const PrismStyles = css`
     padding-top: 2em;
   }
 
+  /* Code blocks rendered without the gatsby-highlight wrapper (rehype-prism-plus output) */
+  pre[class*='language-'] {
+    background-color: ${prismColors.bg};
+    color: var(--lightest-slate);
+    border-radius: var(--border-radius);
+    margin: 2em 0;
+    padding: 1.25em;
+    overflow: auto;
+    font-family: var(--font-mono);
+    font-size: var(--fz-sm);
+    line-height: 1.5;
+  }
+
+  .code-line {
+    display: block;
+  }
+
+  .code-line.line-highlighted {
+    background-color: ${prismColors.lineHighlight};
+    border-left: 2px solid var(--green);
+    padding-left: calc(1em - 2px);
+    margin-right: -1.25em;
+    margin-left: -1.25em;
+  }
+
   /* File names */
   .gatsby-code-title {
     padding: 1em 1.5em;

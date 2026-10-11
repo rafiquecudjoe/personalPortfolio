@@ -1,7 +1,7 @@
 ---
 date: '5'
 title: 'Website Preview API'
-cover: './response.png'
+cover: '/images/featured/website-preview-api/response.png'
 github: '#'
 external: '#'
 tech:

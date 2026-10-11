@@ -1,7 +1,7 @@
 ---
 date: '6'
 title: 'MTN-MOMO Library'
-cover: './mtn.jpeg'
+cover: '/images/featured/mtn-momo-library/mtn.jpeg'
 github: '#'
 external: '#'
 tech:

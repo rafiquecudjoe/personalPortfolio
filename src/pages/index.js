@@ -14,31 +14,41 @@ import {
   CTA,
   Contact,
 } from '@components';
+import { getJobs, getFeatured } from '@lib/content';
 
 const StyledMainContainer = styled.main`
   counter-reset: section;
 `;
 
-const IndexPage = ({ location }) => (
-  <Layout location={location}>
+const IndexPage = ({ jobs, featured }) => (
+  <Layout>
     <StyledMainContainer className="fillHeight">
       <Hero />
       <About />
       <Technologies />
-      <Jobs />
+      <Jobs jobs={jobs} />
       <Stats />
       <Services />
       <Blog />
-      <Featured />
+      <Featured featured={featured} />
       <CTA />
-      {/* <Projects /> */}
       <Contact />
     </StyledMainContainer>
   </Layout>
 );
 
 IndexPage.propTypes = {
-  location: PropTypes.object.isRequired,
+  jobs: PropTypes.arrayOf(PropTypes.object).isRequired,
+  featured: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default IndexPage;
+
+export async function getStaticProps() {
+  return {
+    props: {
+      jobs: getJobs(),
+      featured: getFeatured(),
+    },
+  };
+}

@@ -1,8 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { Layout } from '@components';
-import { Helmet } from 'react-helmet';
+import { Layout, Head } from '@components';
 
 const StyledPrivacySection = styled.section`
   max-width: 800px;
@@ -32,9 +30,9 @@ const StyledPrivacySection = styled.section`
   }
 `;
 
-const PrivacyPage = ({ location }) => (
-  <Layout location={location}>
-    <Helmet title="Privacy Policy" />
+const PrivacyPage = () => (
+  <Layout>
+    <Head title="Privacy Policy" />
 
     <StyledPrivacySection>
       <h2 className="numbered-heading">Privacy Policy</h2>
@@ -120,9 +118,5 @@ const PrivacyPage = ({ location }) => (
     </StyledPrivacySection>
   </Layout>
 );
-
-PrivacyPage.propTypes = {
-  location: PropTypes.object.isRequired,
-};
 
 export default PrivacyPage;

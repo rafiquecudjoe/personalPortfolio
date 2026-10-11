@@ -1,7 +1,7 @@
 ---
 date: '1'
 title: 'KYC microservice'
-cover: './kyc.jpg'
+cover: '/images/featured/kyc-microservice/kyc.jpg'
 github: '#'
 external: '#'
 tech:

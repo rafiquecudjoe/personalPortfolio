@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'gatsby';
+import Link from 'next/link';
 import PropTypes from 'prop-types';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import styled, { css } from 'styled-components';
@@ -161,11 +161,12 @@ const Nav = ({ isHome }) => {
   const Logo = (
     <div className="logo" tabIndex="-1">
       {isHome ? (
+        // eslint-disable-next-line @next/next/no-html-link-for-pages -- full reload restarts the intro animation
         <a href="/" aria-label="home">
           <IconLogo />
         </a>
       ) : (
-        <Link to="/" aria-label="home">
+        <Link href="/" aria-label="home">
           <IconLogo />
         </Link>
       )}
@@ -190,7 +191,7 @@ const Nav = ({ isHome }) => {
                 {navLinks &&
                   navLinks.map(({ url, name }, i) => (
                     <li key={i}>
-                      <Link to={url}>{name}</Link>
+                      <Link href={url}>{name}</Link>
                     </li>
                   ))}
               </ol>
@@ -217,7 +218,7 @@ const Nav = ({ isHome }) => {
                     navLinks.map(({ url, name }, i) => (
                       <CSSTransition key={i} classNames={fadeDownClass} timeout={timeout}>
                         <li key={i} style={{ transitionDelay: `${isHome ? i * 100 : 0}ms` }}>
-                          <Link to={url}>{name}</Link>
+                          <Link href={url}>{name}</Link>
                         </li>
                       </CSSTransition>
                     ))}

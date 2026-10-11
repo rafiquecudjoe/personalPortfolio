@@ -1,13 +1,12 @@
 import React, { useRef, useEffect } from 'react';
-import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
-import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 import { srConfig } from '@config';
 import sr from '@utils/sr';
-import { Layout } from '@components';
+import { Layout, Head } from '@components';
 import { Icon } from '@components/icons';
 import { usePrefersReducedMotion } from '@hooks';
+import { getArchiveProjects } from '@lib/content';
 
 const StyledTableContainer = styled.div`
   margin: 100px -20px;
@@ -129,8 +128,7 @@ const StyledTableContainer = styled.div`
   }
 `;
 
-const ArchivePage = ({ location, data }) => {
-  const projects = data.allMarkdownRemark.edges;
+const ArchivePage = ({ projects }) => {
   const revealTitle = useRef(null);
   const revealTable = useRef(null);
   const revealProjects = useRef([]);
@@ -147,13 +145,13 @@ const ArchivePage = ({ location, data }) => {
   }, []);
 
   return (
-    <Layout location={location}>
-      <Helmet title="Archive" />
+    <Layout>
+      <Head title="Archive" />
 
       <main>
         <header ref={revealTitle}>
           <h1 className="big-heading">Archive</h1>
-          <p className="subtitle">A big list of things I’ve worked on</p>
+          <p className="subtitle">A big list of things I&rsquo;ve worked on</p>
         </header>
 
         <StyledTableContainer ref={revealTable}>
@@ -169,17 +167,9 @@ const ArchivePage = ({ location, data }) => {
             </thead>
             <tbody>
               {projects.length > 0 &&
-                projects.map(({ node }, i) => {
-                  const {
-                    date,
-                    github,
-                    external,
-                    ios,
-                    android,
-                    title,
-                    tech,
-                    company,
-                  } = node.frontmatter;
+                projects.map(({ frontmatter }, i) => {
+                  const { date, github, external, ios, android, title, tech, company } =
+                    frontmatter;
                   return (
                     <tr key={i} ref={el => (revealProjects.current[i] = el)}>
                       <td className="overline year">{`${new Date(date).getFullYear()}`}</td>
@@ -187,16 +177,16 @@ const ArchivePage = ({ location, data }) => {
                       <td className="title">{title}</td>
 
                       <td className="company hide-on-mobile">
-                        {company ? <span>{company}</span> : <span>—</span>}
+                        {company ? <span>{company}</span> : <span>&mdash;</span>}
                       </td>
 
                       <td className="tech hide-on-mobile">
-                        {tech.length > 0 &&
-                          tech.map((item, i) => (
-                            <span key={i}>
+                        {tech &&
+                          tech.length > 0 &&
+                          tech.map((item, j) => (
+                            <span key={j}>
                               {item}
-                              {''}
-                              {i !== tech.length - 1 && <span className="separator">&middot;</span>}
+                              {j !== tech.length - 1 && <span className="separator">&middot;</span>}
                             </span>
                           ))}
                       </td>
@@ -235,34 +225,17 @@ const ArchivePage = ({ location, data }) => {
     </Layout>
   );
 };
+
 ArchivePage.propTypes = {
-  location: PropTypes.object.isRequired,
-  data: PropTypes.object.isRequired,
+  projects: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default ArchivePage;
 
-export const pageQuery = graphql`
-  {
-    allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/projects/" } }
-      sort: { fields: [frontmatter___date], order: DESC }
-    ) {
-      edges {
-        node {
-          frontmatter {
-            date
-            title
-            tech
-            github
-            external
-            ios
-            android
-            company
-          }
-          html
-        }
-      }
-    }
-  }
-`;
+export async function getStaticProps() {
+  return {
+    props: {
+      projects: getArchiveProjects(),
+    },
+  };
+}

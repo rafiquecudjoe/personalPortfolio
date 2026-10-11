@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import Link from 'next/link';
 import styled from 'styled-components';
 import { socialMedia } from '@config';
 import { Icon } from '@components/icons';
@@ -79,8 +79,8 @@ const Footer = () => (
     </StyledSocialLinks>
 
     <StyledLegalLinks>
-      <Link to="/terms">Terms of Service</Link>
-      <Link to="/privacy">Privacy Policy</Link>
+      <Link href="/terms">Terms of Service</Link>
+      <Link href="/privacy">Privacy Policy</Link>
     </StyledLegalLinks>
 
     <StyledCredit tabindex="-1">

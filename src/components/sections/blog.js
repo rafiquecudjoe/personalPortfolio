@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { Link } from 'gatsby';
+import Link from 'next/link';
 import styled from 'styled-components';
 import { srConfig } from '@config';
 import sr from '@utils/sr';
@@ -145,7 +145,7 @@ const Blog = () => {
           <div className="blog-grid">
             {blogPosts.map((post, i) => (
               <div key={i} className="blog-card">
-                <Link to={post.slug}>
+                <Link href={post.slug}>
                   <h3 className="blog-title">{post.title}</h3>
                 </Link>
                 <p className="blog-description">{post.description}</p>
@@ -165,7 +165,7 @@ const Blog = () => {
           </div>
 
           <div className="view-all">
-            <Link to="/pensieve">View All Articles</Link>
+            <Link href="/pensieve">View All Articles</Link>
           </div>
         </>
       ) : (

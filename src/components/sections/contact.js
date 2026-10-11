@@ -70,13 +70,13 @@ const Contact = () => {
 
   return (
     <StyledContactSection id="contact" ref={revealContainer}>
-      <h2 className="numbered-heading overline">What's Next?</h2>
+      <h2 className="numbered-heading overline">What&apos;s Next?</h2>
 
       <h2 className="title">Get In Touch</h2>
 
       <p>
         I am currently looking for new opportunities, my inbox is always open. Whether you have a
-        question or just want to say hi, I'll try my best to get back to you!
+        question or just want to say hi, I&apos;ll try my best to get back to you!
       </p>
 
       <div className="contact-details">

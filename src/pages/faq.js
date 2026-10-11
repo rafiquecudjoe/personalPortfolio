@@ -1,11 +1,9 @@
 import React, { useEffect, useRef } from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { srConfig } from '@config';
 import sr from '@utils/sr';
 import { usePrefersReducedMotion } from '@hooks';
-import { Layout } from '@components';
-import { Helmet } from 'react-helmet';
+import { Layout, Head } from '@components';
 
 const StyledFAQSection = styled.section`
   max-width: 800px;
@@ -28,7 +26,7 @@ const StyledFAQSection = styled.section`
   }
 `;
 
-const FAQPage = ({ location }) => {
+const FAQPage = () => {
   const revealContainer = useRef(null);
   const prefersReducedMotion = usePrefersReducedMotion();
 
@@ -74,8 +72,8 @@ const FAQPage = ({ location }) => {
   ];
 
   return (
-    <Layout location={location}>
-      <Helmet title="FAQ" />
+    <Layout>
+      <Head title="FAQ" />
 
       <StyledFAQSection id="faq" ref={revealContainer}>
         <h2 className="numbered-heading">Frequently Asked Questions</h2>
@@ -91,10 +89,6 @@ const FAQPage = ({ location }) => {
       </StyledFAQSection>
     </Layout>
   );
-};
-
-FAQPage.propTypes = {
-  location: PropTypes.object.isRequired,
 };
 
 export default FAQPage;

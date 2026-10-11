@@ -1,8 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { Layout } from '@components';
-import { Helmet } from 'react-helmet';
+import { Layout, Head } from '@components';
 
 const StyledTermsSection = styled.section`
   max-width: 800px;
@@ -32,9 +30,9 @@ const StyledTermsSection = styled.section`
   }
 `;
 
-const TermsPage = ({ location }) => (
-  <Layout location={location}>
-    <Helmet title="Terms of Service" />
+const TermsPage = () => (
+  <Layout>
+    <Head title="Terms of Service" />
 
     <StyledTermsSection>
       <h2 className="numbered-heading">Terms of Service</h2>
@@ -72,7 +70,7 @@ const TermsPage = ({ location }) => (
       <p>
           Project timelines and deliverables will be outlined in project proposals and contracts.
           While every effort will be made to meet deadlines, Rafique Cudjoe cannot guarantee
-          completion dates if delays are caused by client's failure to provide necessary information
+          completion dates if delays are caused by client&apos;s failure to provide necessary information
           or approvals.
       </p>
 
@@ -127,9 +125,5 @@ const TermsPage = ({ location }) => (
     </StyledTermsSection>
   </Layout>
 );
-
-TermsPage.propTypes = {
-  location: PropTypes.object.isRequired,
-};
 
 export default TermsPage;

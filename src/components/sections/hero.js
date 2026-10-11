@@ -64,7 +64,7 @@ const Hero = () => {
   const four = (
     <>
       <p>
-        I'm a fintech-focused software engineer specializing in building scalable, secure financial
+        I&apos;m a fintech-focused software engineer specializing in building scalable, secure financial
         applications. With expertise in full-stack development and backend architecture, I help
         fintech companies create robust payment systems, trading platforms, and financial APIs.
         Currently working at{' '}

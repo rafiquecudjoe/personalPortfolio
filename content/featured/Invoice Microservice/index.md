@@ -1,7 +1,7 @@
 ---
 date: '2'
 title: 'Bitcoin Lighting Invoice and Payment Microservive'
-cover: './light.png'
+cover: '/images/featured/invoice-microservice/light.png'
 github: '#'
 cta: '#'
 tech:

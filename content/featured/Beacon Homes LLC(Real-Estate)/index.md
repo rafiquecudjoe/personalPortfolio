@@ -1,7 +1,7 @@
 ---
 date: '4'
 title: 'Beacon Homes LLC(Real-Estate)'
-cover: './img1.png'
+cover: '/images/featured/beacon-homes-llc/img1.png'
 github: 'https://github.com/rafiquecudjoe/Real_Estate_Web_App'
 external: 'https://real-estate-web-app-rafiquecudjoe.vercel.app/'
 tech:

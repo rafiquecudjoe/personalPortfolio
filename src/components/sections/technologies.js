@@ -211,7 +211,7 @@ const Technologies = () => {
       <div className="tech-intro">
         <p>
           I work with modern technologies and frameworks to build scalable, performant applications.
-          Here's my current tech stack and expertise levels.
+          Here&apos;s my current tech stack and expertise levels.
         </p>
       </div>
 

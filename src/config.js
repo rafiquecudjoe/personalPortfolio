@@ -1,4 +1,13 @@
 module.exports = {
+  site: {
+    title: 'Rafique Adam Cudjoe',
+    description:
+      'Rafique Adam Cudjoe is a software engineer who specializes in building (and occasionally designing) exceptional digital experiences.',
+    siteUrl: 'https://rafiqueadam.me',
+    image: '/images/logo.png',
+    twitterUsername: '@rafiqueacudjoe',
+  },
+
   email: 'rafiqueacudjoe@gmail.com',
 
   socialMedia: [

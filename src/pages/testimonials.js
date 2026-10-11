@@ -1,11 +1,9 @@
 import React, { useEffect, useRef } from 'react';
-import PropTypes from 'prop-types';
-import { Layout } from '@components';
+import { Layout, Head } from '@components';
 import styled from 'styled-components';
 import { srConfig } from '@config';
 import sr from '@utils/sr';
 import { usePrefersReducedMotion } from '@hooks';
-import { Helmet } from 'react-helmet';
 
 const StyledTestimonialsSection = styled.section`
   max-width: 800px;
@@ -92,7 +90,7 @@ const StyledTestimonialsSection = styled.section`
   }
 `;
 
-const TestimonialsPage = ({ location }) => {
+const TestimonialsPage = () => {
   const revealContainer = useRef(null);
   const prefersReducedMotion = usePrefersReducedMotion();
 
@@ -144,8 +142,8 @@ const TestimonialsPage = ({ location }) => {
   ];
 
   return (
-    <Layout location={location}>
-      <Helmet title="Testimonials" />
+    <Layout>
+      <Head title="Testimonials" />
 
       <StyledTestimonialsSection id="testimonials" ref={revealContainer}>
         <h2 className="numbered-heading">Client Testimonials</h2>
@@ -167,10 +165,6 @@ const TestimonialsPage = ({ location }) => {
       </StyledTestimonialsSection>
     </Layout>
   );
-};
-
-TestimonialsPage.propTypes = {
-  location: PropTypes.object.isRequired,
 };
 
 export default TestimonialsPage;
