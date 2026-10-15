@@ -289,6 +289,7 @@ const StyledProject = styled.li`
     }
 
     .img {
+      height: auto;
       border-radius: var(--border-radius);
       mix-blend-mode: multiply;
       filter: grayscale(100%) contrast(1) brightness(90%);

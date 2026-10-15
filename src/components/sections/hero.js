@@ -64,15 +64,16 @@ const Hero = () => {
   const four = (
     <>
       <p>
-        I&apos;m a fintech-focused software engineer specializing in building scalable, secure financial
-        applications. With expertise in full-stack development and backend architecture, I help
-        fintech companies create robust payment systems, trading platforms, and financial APIs.
-        Currently working at{' '}
+        I&apos;m a fintech-focused software engineer specializing in building scalable, secure
+        financial applications. With expertise in full-stack development and backend architecture, I
+        help fintech companies create robust payment systems, trading platforms, and financial APIs.
+        Currently leading CodeLoft Labs, a backend and product-engineering studio, and building for
+        startups and SaaS teams as a Top Rated freelancer on Upwork. Previously, I spent four years
+        at{' '}
         <a href="https://ejara.com" target="_blank" rel="noreferrer">
           Ejara
-        </a>
-        , where I build next-generation financial products that serve millions of users across
-        Africa.
+        </a>{' '}
+        building crypto investment and savings products for users across Africa.
       </p>
     </>
   );
