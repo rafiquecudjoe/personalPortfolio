@@ -1,5 +1,5 @@
 ---
-date: '4'
+date: '6'
 title: 'KYC microservice'
 cover: '/images/featured/kyc-microservice/kyc.jpg'
 github: '#'
